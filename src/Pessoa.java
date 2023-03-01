@@ -1,7 +1,7 @@
-public class Genero {
+public abstract class Pessoa {
     private String nome;
 
-    public String getNome() {
+    private String getNome() {
         return nome;
     }
 
