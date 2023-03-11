@@ -1,11 +1,12 @@
+import java.util.ArrayList;
+import java.util.Collection;
+
 public class Ator extends Pessoa{
     private String registro;
-
+    private Collection<Filme> filmes = new ArrayList<>();
     public Ator(Diretor diretor) {
         this.diretor = diretor;
     }
-
-    private Diretor diretor;
 
     public String getRegistro() {
         return registro;
@@ -14,12 +15,3 @@ public class Ator extends Pessoa{
     public void setRegistro(String registro) {
         this.registro = registro;
     }
-
-    public Diretor getDiretor() {
-        return diretor;
-    }
-
-    public void setDiretor(Diretor diretor) {
-        this.diretor = diretor;
-    }
-}

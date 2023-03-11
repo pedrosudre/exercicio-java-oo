@@ -1,11 +1,13 @@
+import java.util.ArrayList;
+import java.util.Collection;
+
 public class Diretor extends Pessoa{
     private Integer quantidadePremios;
+    private Collection<Filme> filmes = new ArrayList<Filme>();
 
-    public Diretor(Ator ator) {
-        this.ator = ator;
+    public Diretor(String nome) {
+        super.setNome(nome);
     }
-
-    private Ator ator;
 
     public Integer getQuantidadePremios() {
         return quantidadePremios;
@@ -15,11 +17,18 @@ public class Diretor extends Pessoa{
         this.quantidadePremios = quantidadePremios;
     }
 
-    public Ator getAtor() {
-        return ator;
+
+    public Collection<Filme> getFilmes() {
+        return filmes;
     }
 
-    public void setAtor(Ator ator) {
-        this.ator = ator;
+    public void setFilmes(Collection<Filme> filmes) {
+        this.filmes = filmes;
     }
+    public void listaFilmes() {
+        for (Filme filme: this.filmes) {
+            System.out.println(filme.getNome());
+        }
+    }
+
 }
