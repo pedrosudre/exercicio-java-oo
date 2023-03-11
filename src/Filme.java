@@ -50,12 +50,15 @@ public class Filme {
         this.genero = genero;
     }
 
-
+    @Override
     public String toString() {
-        return this.nome.concat("/n").concat(this.getGenero()getNome().concat("/n").concat(this.getAnoLancamento().toString());
+        return this.nome.concat("\n").concat(this.getGenero().getNome()).concat("\n").concat(this.getAnoLancamento().toString());
     }
     public Diretor getDiretor() {
         return diretor;
+    }
+    public void setDiretor(Diretor diretor) {
+        this.diretor = diretor;
     }
 
     public Collection<Ator> getAtores() {
@@ -66,7 +69,19 @@ public class Filme {
         this.atores = atores;
     }
 
+    public void addAtor(Ator ator) {
+        this.atores.add(ator);
+    }
 
+    public void imprimirInformacoes() {
+        System.out.println("Nome do filme: " + this.nome);
+        System.out.println("Gênero: " + this.genero.getNome());
+        System.out.println("Diretor: " + this.diretor);
+        System.out.println("Atores: ");
+        for (Ator a: this.atores) {
+            System.out.println("- " + a.getNome());
+        }
+    }
 
 }
 

@@ -1,7 +1,7 @@
 public abstract class Pessoa {
     private String nome;
 
-    private String getNome() {
+    public String getNome() {
         return nome;
     }
 

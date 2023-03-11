@@ -25,10 +25,18 @@ public class Diretor extends Pessoa{
     public void setFilmes(Collection<Filme> filmes) {
         this.filmes = filmes;
     }
+
+    public void addFilme(Filme filme) {
+        this.filmes.add(filme);
+    }
+
     public void listaFilmes() {
         for (Filme filme: this.filmes) {
             System.out.println(filme.getNome());
         }
     }
-
+    @Override
+    public String toString() {
+        return super.getNome() + " - Prêmios: " + this.getQuantidadePremios();
+    }
 }
